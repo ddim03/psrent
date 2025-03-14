@@ -3,7 +3,7 @@
         {{ $title }}
     </x-ui.label>
     <x-ui.input type="{{ $type }}" name="{{ $name }}" id="{{ $name }}"
-        placeholder="{{ $placeholder }}" required="{{ $required }}" />
+        placeholder="{{ $placeholder }}" required="{{ $required }}" value="{{ $value ?? '' }}" />
     @error($error)
         <x-ui.input-error :message="$message" />
     @enderror
