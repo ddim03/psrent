@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\UnitStatus;
 use App\Models\Unit;
 
 class HomeController extends Controller
 {
     public function __invoke()
     {
-        $units = Unit::with('service')->paginate(10);
         return view('pages.home', [
-            'units' => $units
+            'units' => Unit::with('service')
+                ->where('status', UnitStatus::AVAILABLE)
+                ->paginate(10)
         ]);
     }
 }
