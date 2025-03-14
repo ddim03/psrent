@@ -30,7 +30,7 @@
                 </li>
                 <li>
                     @guest
-                        <x-ui.button href="#">
+                        <x-ui.button href="{{ route('login') }}">
                             Login
                             <x-icon.arrow-right />
                         </x-ui.button>
@@ -61,7 +61,7 @@
                                         <form action="{{ route('logout') }}" method="POST">
                                             @csrf
                                             <button type="submit"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                                class="block px-4 py-2 w-full text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
                                                 Log out
                                             </button>
                                         </form>
