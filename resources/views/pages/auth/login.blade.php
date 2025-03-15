@@ -16,7 +16,7 @@
                         placeholder="••••••••" required="true" error="email" />
                     <div class="flex
                         items-center">
-                        <input id="remember" aria-describedby="remember" type="checkbox"
+                        <input id="remember" aria-describedby="remember" type="checkbox" name="remember" value="true"
                             class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800">
                         <div class="ml-3 text-sm">
                             <label for="remember" class="text-gray-500 dark:text-gray-300">Remember

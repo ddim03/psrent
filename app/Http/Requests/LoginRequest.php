@@ -14,6 +14,13 @@ class LoginRequest extends FormRequest
         return true;
     }
 
+    public function prepareForValidation(): void
+    {
+        $this->merge([
+            'remember' => $this->has('remember'),
+        ]);
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,7 +31,7 @@ class LoginRequest extends FormRequest
         return [
             'email' => ['required', 'email', 'exists:users,email'],
             'password' => ['required', 'string'],
-            'remember_me' => ['boolean', 'nullable'],
+            'remember' => ['nullable', 'boolean'],
         ];
     }
 }
